@@ -1,0 +1,18 @@
+.navBar{
+    color: white;
+    background-color: #023646;
+    text-align: center;
+    width: 100%;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.navBar h1{
+    font-size: 7vh;
+}
+
+.logo{
+    height: 30vh;
+}
+
+
