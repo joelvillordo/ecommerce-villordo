@@ -10,7 +10,7 @@ import img from './logo.png';
 function NavBar() {
     return (
         <div className="navBar">
-            <img src={img} className="logo"/>
+            <img src={img} className="logo" alt="logo"/>
             <div>
                 <ButtonGroup aria-label="outlined primary button group">
                     <Button variant="contained">PC</Button>
