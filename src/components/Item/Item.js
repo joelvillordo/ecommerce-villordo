@@ -10,12 +10,15 @@ import Typography from "@material-ui/core/Typography";
 import './Item.css';
 
 
-function Item({ id, title, description, price, pictureUrl }) {
+function Item({ data }) {
   const useStyles = makeStyles({
     root: {
-      maxWidth: 345,
+      maxWidth: 250,
+      minHeight: 400,
+      maxHeight: 500,
     },
   });
+
 
   const classes = useStyles();
 
@@ -25,23 +28,20 @@ function Item({ id, title, description, price, pictureUrl }) {
         <CardActionArea>
           <CardMedia
             component="img"
-            alt= {title}    
-            height="140"
-            image= {pictureUrl}
+            alt= {data.title}
+            height= "250"
+            image= {data.pictureUrl}
             title="Contemplative Reptile"
           />
-          <CardContent>
+          <CardContent >
             <Typography gutterBottom variant="h5" component="h2">
-              {title}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              {description}
+              {data.title}
             </Typography>
           </CardContent>
         </CardActionArea>
         <CardActions>
           <Button size="small" color="primary">
-            {price}
+            {data.price}
           </Button>
           <Button size="small" color="primary">
             Ver Más

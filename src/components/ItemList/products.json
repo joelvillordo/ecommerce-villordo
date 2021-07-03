@@ -1,0 +1,31 @@
+[
+    {
+        "id":0,
+        "title":"Pc Armada Amd Cpu A6 7480 Fm2 Hdmi Ddr3 8gb Ssd 240 Win10",
+        "description":"- MICRO: A6-7480 3.5GHz 2 NUCLEOS - VIDEO: Radeon R5 INTEGRADA -MOTHER: MSI/ASROCK A68HM-E33 VGA USB 3.0 - DISCO RIGIDO: SSD 240GB SATA3 - MEMORIA RAM: 8Gb 1600Mhz Ddr3 - GABINETE: SENTEY G18 KIT Teclado, Mouse y Parlantes - Fuente Bcp500w - SISTEMA OPERATIVO: WINDOWS 10 64bits TRIAL",
+        "price":"$100000",
+        "pictureUrl":"https://http2.mlstatic.com/D_NQ_NP_2X_757164-MLA31043839342_062019-F.webp"
+    },
+    {
+        "id":1,
+        "title":"Pc Armada Cpu Amd Full Gamer A10-9700 16gb Ddr4 2400mhz 1080p Hdmi",
+        "description":"MICRO: AMD A10 9700 10 nucleos con cooler BOX -VIDEO: RADEON R7 2GB (ONBOARD) - MOTHER: ASROCK/GIGABYTE/MSI A320 (se entrega segun disponibilidad de stock) - DISCO RIGIDO: SSD 240 SATA3 - MEMORIA RAM: 16GB 2400/2666MHZ DDR4 - GABINETE: ATX SENTEY F10/X10 RGB USB 3.0 - FUENTE: LNZ 500W - SISTEMA OPERATIVO: WINDOWS 10 64bits TRIAL",
+        "price":"$150.000",
+        "pictureUrl":"https://http2.mlstatic.com/D_NQ_NP_2X_856328-MLA42504174757_072020-F.webp"
+    },
+    {
+        "id":2,
+        "title":"Pc Cpu Nueva Computadora Escritorio Completa Monitor",
+        "description":" Incluye:- Monitor Philips 19 HDMI- Gabinete.- 4GB de memoria RAM.- 120GB disco de estado sólido.- Kit teclado, mouse y parlantes.- Windows 10 64 Bits Trial (30 días de prueba).",
+        "price":"$75.000",
+        "pictureUrl":"https://http2.mlstatic.com/D_NQ_NP_2X_674782-MLA44443263046_122020-F.webp"
+    },
+    {
+        "id":3,
+        "title":"Pc Intel I5 9400 9na Gen Ram 8gb Ddr4 Ssd 480 Gabinete Full",
+        "description":"-Microprocesador Intel Core i5 9400 - 4 Núcleos - 2.9Ghz Base/ Turbo 4.1Ghz - Cache 9Mb - Gráficos Intel HD 630/ 14nm - Coffee Lake - 9na Generacion Int -Motherboard ASROCK/MSI H310M PRO Vh - DDR4 hasta 64GB - USB 3.1/ PCI-E 3.0 - Salida de Vídeo HDMI 4K / Compatible con Memoria DDR4 2400- Memoria RAM Crucial/Pny 8GB DDR4 2400Mhz Sport- Ssd 480Gb Sata3 Wd Caviar Green 500mbps/s- Gabinete Atx Kit BRB G28 500w Teclado,Mouse Parlantes Multimedia",
+        "price":"$180.000",
+        "pictureUrl":"https://http2.mlstatic.com/D_NQ_NP_2X_870246-MLA42296607102_062020-F.webp"
+        }
+]
+
