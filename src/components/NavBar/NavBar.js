@@ -9,22 +9,24 @@ import img from "./logo.png";
 function NavBar() {
   return (
     <div className="navBar">
-      <img src={img} className="logo" alt="logo" />
+      <Link to="/">
+        <img src={img} className="logo" alt="logo" />
+      </Link>
       <div>
         <ButtonGroup aria-label="outlined primary button group">
-          <Link to='/pc' classname="Link">
+          <Link to="/pc" classname="Link">
             <Button variant="contained">PC</Button>
           </Link>
-          <Link to='notebooks' classname="Link">
+          <Link to="notebooks" classname="Link">
             <Button variant="contained">Notebooks</Button>
           </Link>
-          <Link to='lcd' classname="Link">
+          <Link to="lcd" classname="Link">
             <Button variant="contained">Monitores</Button>
           </Link>
-          <Link to='accessories' classname="Link">
+          <Link to="accessories" classname="Link">
             <Button variant="contained">Accesorios</Button>
           </Link>
-          <Link to='videocard' classname="Link">
+          <Link to="videocard" classname="Link">
             <Button variant="contained">Placas de video</Button>
           </Link>
           <Link>

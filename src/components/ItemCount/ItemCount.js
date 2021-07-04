@@ -3,11 +3,11 @@ import { Button } from "@material-ui/core";
 import "./ItemCount.css";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
-function ItemCount({ title, stock }) {
+function ItemCount({ data }) {
   const [unit, setUnit] = useState(0);
-  //Solo funciona hasta que llega al limite de stock que es pasado por props
+  //Solo funciona hasta que llega al limite de stock que es pasado por props, por ahora es un numero fijo
   const handleAddItem = () => {
-    if (unit < stock) {
+    if (unit < 10) {
       setUnit(unit + 1);
     }
   };
@@ -19,7 +19,7 @@ function ItemCount({ title, stock }) {
   };
   return (
     <div className="itemCount">
-      <h3>{title}</h3>
+      <h3>{data.title}</h3>
       <div>
         <Button
           onClick={handleDeleteItem}
