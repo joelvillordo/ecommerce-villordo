@@ -6,16 +6,15 @@ import { Link } from "react-router-dom";
 
 //Mapeo de todos los productos y devuelvo un componen Item con una vista de los mismos
 export default function ItemList({ data }) {
-    return (
-      <div className="ItemList">
-        {data.map((product) => (
-          <div key={product.id}>
-            <Link to={`/item/${product.id}`}>
-              <Item data={product} />
-            </Link>
-          </div>
-        ))}
-      </div>
-    );
-  }
-
+  return (
+    <div className="ItemList">
+      {data.map((product) => (
+        <div key={product.id}>
+          <Link to={`/item/${product.id}`}>
+            <Item data={product} />
+          </Link>
+        </div>
+      ))}
+    </div>
+  );
+}

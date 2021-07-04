@@ -1,13 +1,13 @@
-import React from 'react';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import './NavBar.css';
+import React from "react";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import "./NavBar.css";
 
 function CartWidget() {
-    return (
-        <div className="cart">
-            <ShoppingCartIcon fontSize="large"/>
-        </div>
-    )
+  return (
+    <div className="cart">
+      <ShoppingCartIcon fontSize="large" />
+    </div>
+  );
 }
 
-export default CartWidget
+export default CartWidget;

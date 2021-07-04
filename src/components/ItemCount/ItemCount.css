@@ -1,20 +1,20 @@
-.itemCount{
-    display: inline-block;
-    border: 1px solid grey;
-    border-radius: 5%;
-    padding: 10px;
+.itemCount {
+  display: inline-block;
+  border: 1px solid grey;
+  border-radius: 5%;
+  padding: 10px;
 }
-.itemCount h3{
-    font-size: small;
+.itemCount h3 {
+  font-size: small;
 }
-.itemCount div{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    padding: 15px;
-    align-items: center;
+.itemCount div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 15px;
+  align-items: center;
 }
 
-.itemCount p{
-    margin: 0 30px;
+.itemCount p {
+  margin: 0 30px;
 }

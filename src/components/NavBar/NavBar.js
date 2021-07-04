@@ -14,19 +14,19 @@ function NavBar() {
       </Link>
       <div>
         <ButtonGroup aria-label="outlined primary button group">
-          <Link to="/pc" classname="Link">
+          <Link to="/category/pc" classname="Link">
             <Button variant="contained">PC</Button>
           </Link>
-          <Link to="notebooks" classname="Link">
+          <Link to="/category/notebooks" classname="Link">
             <Button variant="contained">Notebooks</Button>
           </Link>
-          <Link to="lcd" classname="Link">
+          <Link to="/category/lcd" classname="Link">
             <Button variant="contained">Monitores</Button>
           </Link>
-          <Link to="accessories" classname="Link">
+          <Link to="/category/accessories" classname="Link">
             <Button variant="contained">Accesorios</Button>
           </Link>
-          <Link to="videocard" classname="Link">
+          <Link to="/category/videocard" classname="Link">
             <Button variant="contained">Placas de video</Button>
           </Link>
           <Link>

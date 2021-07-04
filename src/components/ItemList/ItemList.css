@@ -1,8 +1,8 @@
-.ItemList{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+.ItemList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  column-gap: 5px;
+  margin-top: 20px;
+  margin-left: 15px;
 }
