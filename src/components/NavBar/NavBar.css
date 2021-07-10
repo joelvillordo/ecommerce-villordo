@@ -18,3 +18,16 @@ a {
 .MuiButton-label {
   font-size: medium;
 }
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+
+.activeStyle {
+  font-weight: "bold";
+  border-bottom: "5px solid black";
+  font-size: "x-large";
+}

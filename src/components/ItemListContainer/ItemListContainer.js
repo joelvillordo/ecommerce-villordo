@@ -9,7 +9,6 @@ function ItemListContainer() {
   //Api con productos, incluyendo filtrado por categoria, si no esta definida devuelve todos los productos
   const [products, setProducts] = useState([]);
   const { categoryName } = useParams();
-  console.log(categoryName);
 
   const inProgress = () => {
     setLoading(true);

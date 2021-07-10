@@ -24,9 +24,7 @@ const ItemDetailContainer = ({ match }) => {
     fetch("https://mocki.io/v1/9bb5ee34-92dd-4a14-a352-d515c3f0b7f9")
       .then((res) => res.json())
       .then((res) => setProduct(res[item]));
-  }, []);
-
-  console.log(product);
+  }, [item]);
 
   if (loading) {
     return (
@@ -37,7 +35,7 @@ const ItemDetailContainer = ({ match }) => {
   } else {
     return (
       <div className="ItemDetailContainer">
-        <ItemDetail data={product} />
+        <ItemDetail product={product} />
       </div>
     );
   }

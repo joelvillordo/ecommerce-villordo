@@ -1,40 +1,81 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import "./NavBar.css";
-import { ButtonGroup } from "@material-ui/core";
-import { Button } from "@material-ui/core";
 import img from "./logo.png";
 
 function NavBar() {
   return (
     <div className="navBar">
-      <Link to="/">
+      <NavLink to="/">
         <img src={img} className="logo" alt="logo" />
-      </Link>
-      <div>
-        <ButtonGroup aria-label="outlined primary button group">
-          <Link to="/category/pc" classname="Link">
-            <Button variant="contained">PC</Button>
-          </Link>
-          <Link to="/category/notebooks" classname="Link">
-            <Button variant="contained">Notebooks</Button>
-          </Link>
-          <Link to="/category/lcd" classname="Link">
-            <Button variant="contained">Monitores</Button>
-          </Link>
-          <Link to="/category/accessories" classname="Link">
-            <Button variant="contained">Accesorios</Button>
-          </Link>
-          <Link to="/category/videocard" classname="Link">
-            <Button variant="contained">Placas de video</Button>
-          </Link>
-          <Link>
-            <Button variant="contained" classname="Link">
-              <CartWidget />
-            </Button>
-          </Link>
-        </ButtonGroup>
+      </NavLink>
+      <div className="navigation">
+        <NavLink
+          activeStyle={{
+            fontWeight: "bold",
+            borderBottom: "5px solid black",
+            fontSize: "x-large",
+          }}
+          to="/category/pc"
+          classname="NavLink"
+        >
+          PC
+        </NavLink>
+        <NavLink
+          activeStyle={{
+            fontWeight: "bold",
+            borderBottom: "5px solid black",
+            fontSize: "x-large",
+          }}
+          to="/category/notebooks"
+          classname="NavLink"
+        >
+          Notebooks
+        </NavLink>
+        <NavLink
+          activeStyle={{
+            fontWeight: "bold",
+            borderBottom: "5px solid black",
+            fontSize: "x-large",
+          }}
+          to="/category/lcd"
+          classname="NavLink"
+        >
+          Monitores
+        </NavLink>
+        <NavLink
+          activeStyle={{
+            fontWeight: "bold",
+            borderBottom: "5px solid black",
+            fontSize: "x-large",
+          }}
+          to="/category/accessories"
+          classname="NavLink"
+        >
+          Accesorios
+        </NavLink>
+        <NavLink
+          activeStyle={{
+            fontWeight: "bold",
+            borderBottom: "5px solid black",
+            fontSize: "x-large",
+          }}
+          to="/category/videocard"
+          classname="NavLink"
+        >
+          Placas de video
+        </NavLink>
+        <NavLink
+          activeStyle={{
+            fontWeight: "bold",
+            borderBottom: "5px solid black",
+            fontSize: "x-large",
+          }}
+          to="/cart"
+        >
+          <CartWidget />
+        </NavLink>
       </div>
     </div>
   );
