@@ -13,7 +13,7 @@ function Item({ data }) {
     root: {
       maxWidth: 300,
       minHeight: 400,
-      maxHeight: 600,
+      maxHeight: 500,
     },
   });
 
@@ -24,11 +24,12 @@ function Item({ data }) {
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia
+            className={classes.img}
             component="img"
             alt={data.title}
             height="250"
             image={data.pictureUrl}
-            title="Contemplative Reptile"
+            title={data.title}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
@@ -38,7 +39,7 @@ function Item({ data }) {
         </CardActionArea>
         <CardActions>
           <Button size="small" color="primary">
-            {data.price}
+            ${data.price.toLocaleString("es")}
           </Button>
           <Button size="small" color="primary">
             Ver Más

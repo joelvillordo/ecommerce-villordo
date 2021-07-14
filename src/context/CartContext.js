@@ -25,10 +25,30 @@ export const CartProvider = ({ children }) => {
       setCart((prev) => [...prev, { ...item, quantity }]);
     }
   };
+  //Stock online para evitar compras cuando en realidad no hay stock
+  const onlineStock = (product) => {
+    const foundItem = cart.find((e) => e.id === product.id);
+    return foundItem ? product.stock - foundItem.quantity : product.stock;
+  };
+
+  //Logica para eliminar un producto del carrito
+  const deleteItem = (id) => {
+    //Filtro el carrito, para crear uno nuevo con Filter, dejando de lado el item eliminado
+    const cartFiltered = cart.filter((item) => item.id !== id);
+    setCart(cartFiltered);
+  };
 
   return (
     <CartContext.Provider
-      value={{ cart, setCart, clearCart, isInCart, addItem }}
+      value={{
+        cart,
+        setCart,
+        clearCart,
+        isInCart,
+        addItem,
+        deleteItem,
+        onlineStock,
+      }}
     >
       {children}
     </CartContext.Provider>

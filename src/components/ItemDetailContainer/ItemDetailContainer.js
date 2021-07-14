@@ -1,32 +1,26 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
+import { db } from "../../firebase";
 //Loader
 import CircularProgress from "@material-ui/core/CircularProgress";
 
 //Aca deberia recibir la data desde el id donde se hace click para pasarla al ItemDetail
 const ItemDetailContainer = ({ match }) => {
   //Tomo el id del item clickeado
-  let item = match.params.id;
+  let id = match.params.id;
   //Tomo los productos de la API
   const [product, setProduct] = useState([]);
 
-  //Loader
-  const [loading, setLoading] = useState(false);
   useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
+    (async () => {
+      const res = await db.doc(id).get();
+      setProduct({ id: res.id, ...res.data() });
+    })();
+  }, [id]);
 
-  useEffect(() => {
-    fetch("https://mocki.io/v1/9bb5ee34-92dd-4a14-a352-d515c3f0b7f9")
-      .then((res) => res.json())
-      .then((res) => setProduct(res[item]));
-  }, [item]);
-
-  if (loading) {
+  //Renderizado condicional para mostrar un loader
+  if (product.length < 1) {
     return (
       <div className="ItemDetailContainer">
         <CircularProgress />

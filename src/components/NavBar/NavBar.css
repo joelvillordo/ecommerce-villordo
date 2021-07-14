@@ -13,6 +13,7 @@
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 .MuiButton-label {
@@ -23,11 +24,20 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: white;
+  background-color: #023646;
+  min-height: 50px;
 }
 
-.activeStyle {
-  font-weight: "bold";
-  border-bottom: "5px solid black";
-  font-size: "x-large";
+.cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart p {
+  background-color: rgb(8, 4, 32);
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 3px;
 }

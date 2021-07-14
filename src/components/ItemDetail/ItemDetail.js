@@ -12,13 +12,15 @@ import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
-    maxWidth: 700,
+    width: "50%",
+    padding: "10px",
   },
   media: {
-    height: 10,
-    paddingTop: "56.25%", // 16:9
+    height: 400,
+    backgroundPosition: "center",
+    backgroundSize: "80%",
   },
 }));
 
@@ -27,38 +29,45 @@ export default function ItemDetail({ product }) {
 
   const [toCart, setToCart] = useState(false);
 
-  const { addItem } = useContext(CartContext);
+  const { addItem, onlineStock } = useContext(CartContext);
   const onAdd = (quantity) => {
     addItem(product, quantity);
     setToCart(true);
   };
+  //Stock actualizado
+  const stock = onlineStock(product);
 
   const cartContent = useContext(CartContext).cart;
   console.log(cartContent);
 
   return (
-    <Card className={classes.root}>
-      <CardHeader title={product.title} />
-      <CardMedia
-        className={classes.media}
-        image={product.pictureUrl}
-        title={product.title}
-      />
-      <CardContent>
-        <Typography variant="body2" color="black" component="p">
-          {product.description}
-        </Typography>
-        <h3>{product.price}</h3>
-      </CardContent>
-      {toCart ? (
-        <Link to="/cart">
-          <Button to="/cart" color="primary" variant="contained">
-            Terminá tu compra
-          </Button>
-        </Link>
-      ) : (
-        <ItemCount product={product} onAdd={onAdd} />
-      )}
-    </Card>
+    <>
+      <Card className={classes.root}>
+        <CardHeader title={product.title} />
+        <CardMedia
+          className={classes.media}
+          image={product.pictureUrl}
+          title={product.title}
+        />
+      </Card>
+      <Card className={classes.root}>
+        <CardContent>
+          <Typography variant="body2">
+            <h3>Descripción</h3>
+            {product.description}
+          </Typography>
+          <h3>${product.price.toLocaleString("es")}</h3>
+        </CardContent>
+        {toCart ? (
+          <Link to="/cart">
+            <Button to="/cart" color="primary" variant="contained">
+              Terminá tu compra
+            </Button>
+          </Link>
+        ) : (
+          <ItemCount onAdd={onAdd} stock={stock} />
+        )}
+      </Card>
+    </>
   );
 }

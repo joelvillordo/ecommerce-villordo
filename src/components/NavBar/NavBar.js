@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import "./NavBar.css";
 import img from "./logo.png";
+//CartContext para renderizado condicional del CartWidget
+import { CartContext } from "../../context/CartContext";
 
 function NavBar() {
+  const cartContent = useContext(CartContext).cart;
   return (
     <div className="navBar">
       <NavLink to="/">
@@ -14,68 +17,70 @@ function NavBar() {
         <NavLink
           activeStyle={{
             fontWeight: "bold",
-            borderBottom: "5px solid black",
+            borderBottom: "5px solid white",
             fontSize: "x-large",
           }}
           to="/category/pc"
-          classname="NavLink"
+          className="NavLink"
         >
           PC
         </NavLink>
         <NavLink
           activeStyle={{
             fontWeight: "bold",
-            borderBottom: "5px solid black",
+            borderBottom: "5px solid white",
             fontSize: "x-large",
           }}
           to="/category/notebooks"
-          classname="NavLink"
+          className="NavLink"
         >
           Notebooks
         </NavLink>
         <NavLink
           activeStyle={{
             fontWeight: "bold",
-            borderBottom: "5px solid black",
+            borderBottom: "5px solid white",
             fontSize: "x-large",
           }}
           to="/category/lcd"
-          classname="NavLink"
+          className="NavLink"
         >
           Monitores
         </NavLink>
         <NavLink
           activeStyle={{
             fontWeight: "bold",
-            borderBottom: "5px solid black",
+            borderBottom: "5px solid white",
             fontSize: "x-large",
           }}
           to="/category/accessories"
-          classname="NavLink"
+          className="NavLink"
         >
           Accesorios
         </NavLink>
         <NavLink
           activeStyle={{
             fontWeight: "bold",
-            borderBottom: "5px solid black",
+            borderBottom: "5px solid white",
             fontSize: "x-large",
           }}
           to="/category/videocard"
-          classname="NavLink"
+          className="NavLink"
         >
           Placas de video
         </NavLink>
-        <NavLink
-          activeStyle={{
-            fontWeight: "bold",
-            borderBottom: "5px solid black",
-            fontSize: "x-large",
-          }}
-          to="/cart"
-        >
-          <CartWidget />
-        </NavLink>
+        {cartContent.length < 1 ? null : (
+          <NavLink
+            activeStyle={{
+              fontWeight: "bold",
+              border: "5px solid white",
+              borderRadius: "50%",
+            }}
+            to="/cart"
+          >
+            <CartWidget />
+          </NavLink>
+        )}
       </div>
     </div>
   );
