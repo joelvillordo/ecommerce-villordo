@@ -8,6 +8,8 @@ import Cart from "./components/Cart/Cart";
 //reac router dom
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { CartProvider } from "./context/CartContext";
+import CheckoutContainer from "./components/Checkout/CheckoutContainer";
+import Success from "./components/Checkout/Success";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
               />
               <Route path="/item/:id" component={ItemDetailContainer} />
               <Route path="/cart" component={Cart} />
+              <Route path="/checkout" component={CheckoutContainer} />
+              <Route path="/success" component={Success} />
             </Switch>
           </div>
         </Router>

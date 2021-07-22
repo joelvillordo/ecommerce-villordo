@@ -1,6 +1,6 @@
 .navBar {
   color: white;
-  background-color: #023646;
+  background-color: #012f44;
   text-align: center;
   width: 100%;
   border: 2px solid black;
@@ -9,6 +9,11 @@
 
 .logo {
   height: 30vh;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+.logo:hover {
+  border: 3px solid white;
 }
 
 a {
@@ -24,7 +29,7 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #023646;
+  background-color: #012f44;
   min-height: 50px;
 }
 

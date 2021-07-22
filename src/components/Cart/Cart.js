@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import "./Cart.css";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import CartDetail from "./CartDetail";
@@ -7,7 +8,6 @@ import { Button } from "@material-ui/core";
 const Cart = () => {
   const { clearCart } = useContext(CartContext);
   const cartContent = useContext(CartContext).cart;
-  console.log(cartContent);
   return (
     <>
       {cartContent.length < 1 ? (
@@ -20,8 +20,17 @@ const Cart = () => {
           </Link>
         </div>
       ) : (
-        <div>
+        <div className="cartDetail">
           <CartDetail />
+          <Link to="/checkout">
+            <Button
+              style={{ marginTop: "20px" }}
+              variant="contained"
+              color="primary"
+            >
+              Finalizar compra
+            </Button>
+          </Link>
           <Button
             style={{ marginTop: "20px" }}
             variant="contained"

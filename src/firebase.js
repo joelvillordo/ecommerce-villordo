@@ -15,3 +15,5 @@ const app = !firebase.apps.length
   : firebase.app();
 
 export const db = firebase.firestore(app).collection("items");
+
+export const dbOrders = firebase.firestore(app).collection("orders");

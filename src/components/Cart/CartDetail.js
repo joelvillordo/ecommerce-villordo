@@ -32,9 +32,9 @@ export default function CartDetail({ product }) {
         <TableHead>
           <TableRow>
             <TableCell align="center" colSpan={3}>
-              Detalle
+              Detalle de tu compra
             </TableCell>
-            <TableCell align="right">Precio</TableCell>
+            <TableCell align="right"></TableCell>
           </TableRow>
           <TableRow>
             <TableCell>Producto</TableCell>

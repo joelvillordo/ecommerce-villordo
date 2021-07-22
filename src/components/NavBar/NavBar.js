@@ -16,9 +16,9 @@ function NavBar() {
       <div className="navigation">
         <NavLink
           activeStyle={{
-            fontWeight: "bold",
             borderBottom: "5px solid white",
             fontSize: "x-large",
+            transition: "0.2s",
           }}
           to="/category/pc"
           className="NavLink"
@@ -27,9 +27,9 @@ function NavBar() {
         </NavLink>
         <NavLink
           activeStyle={{
-            fontWeight: "bold",
             borderBottom: "5px solid white",
             fontSize: "x-large",
+            transition: "0.2s",
           }}
           to="/category/notebooks"
           className="NavLink"
@@ -38,9 +38,9 @@ function NavBar() {
         </NavLink>
         <NavLink
           activeStyle={{
-            fontWeight: "bold",
             borderBottom: "5px solid white",
             fontSize: "x-large",
+            transition: "0.2s",
           }}
           to="/category/lcd"
           className="NavLink"
@@ -49,9 +49,9 @@ function NavBar() {
         </NavLink>
         <NavLink
           activeStyle={{
-            fontWeight: "bold",
             borderBottom: "5px solid white",
             fontSize: "x-large",
+            transition: "0.2s",
           }}
           to="/category/accessories"
           className="NavLink"
@@ -60,9 +60,9 @@ function NavBar() {
         </NavLink>
         <NavLink
           activeStyle={{
-            fontWeight: "bold",
             borderBottom: "5px solid white",
             fontSize: "x-large",
+            transition: "0.2s",
           }}
           to="/category/videocard"
           className="NavLink"
@@ -73,8 +73,9 @@ function NavBar() {
           <NavLink
             activeStyle={{
               fontWeight: "bold",
-              border: "5px solid white",
+              border: "2px solid white",
               borderRadius: "50%",
+              transition: "0.3s",
             }}
             to="/cart"
           >

@@ -13,7 +13,7 @@ function Item({ data }) {
     root: {
       maxWidth: 300,
       minHeight: 400,
-      maxHeight: 500,
+      marginTop: 10,
     },
   });
 
@@ -27,12 +27,12 @@ function Item({ data }) {
             className={classes.img}
             component="img"
             alt={data.title}
-            height="250"
+            width="50%"
             image={data.pictureUrl}
             title={data.title}
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h5" component="h2" height="50%">
               {data.title}
             </Typography>
           </CardContent>

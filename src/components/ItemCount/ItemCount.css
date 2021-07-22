@@ -1,7 +1,5 @@
 .itemCount {
   display: inline-block;
-  border: 1px solid grey;
-  border-radius: 5%;
   padding: 10px;
 }
 .itemCount h3 {

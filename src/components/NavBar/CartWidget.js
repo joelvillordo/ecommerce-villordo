@@ -4,7 +4,9 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import "./NavBar.css";
 
 function CartWidget() {
-  const cartContent = useContext(CartContext).cart.length;
+  const cartContent = useContext(CartContext).cart.reduce((acc, item) => {
+    return acc + item.quantity;
+  }, 0);
 
   return (
     <div className="cart">

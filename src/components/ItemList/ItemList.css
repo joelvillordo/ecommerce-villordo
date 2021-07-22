@@ -1,4 +1,4 @@
-.ItemList {
+/*.ItemList {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -6,4 +6,22 @@
   column-gap: 5px;
   margin-top: 20px;
   margin-left: 15px;
+}*/
+.ItemList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: end;
+  align-items: start;
+  column-gap: 5px;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.MuiTypography-h5 {
+  font-size: 1rem !important;
+  font-weight: bold;
+}
+
+.MuiCardMedia-img {
+  max-height: 250px;
 }
