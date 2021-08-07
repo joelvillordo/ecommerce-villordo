@@ -1,12 +1,12 @@
 Ecommerce Villordo
 
-El proyecto fue trabajado con dependencias vistas en clase (react-router-dom, axios, etc) y por ahora el framework de
-CSS elegido es Material-UI.
+![JoCommerce - Google Chrome 2021-08-06 22-08-48](https://user-images.githubusercontent.com/78237864/128583524-13d2056b-b24d-4af9-9100-166a4e9171a2.gif)
 
-Aun hay mucho por pulir en lo que es el CSS, pero creo que la logica implementada esta optima segun lo solicitado hasta el momento.
 
-En el archivo App, estan configuradas las rutas, con rutas dinamicas para el detalle de productos y las categorias. Se puede navegar a traves de las mismas con un NavBar (por ahora solo subi 3 categorias de productos).
+El proyecto fue trabajado con dependencias vistas en clase (react-router-dom, axios, etc) se eligio un framework en el css (Material-UI) para poder enfocarnos de lleno en la logica utilizando componentes de la libreria y optimizando el tiempo dedicado al diseño.
 
-Se implemento un setTimeOut para mostrar un circulo de progreso mientras simulamos la consulta al backend.
+La aplicacion cuenta con una pagina principal que muestra todos los productos disponibles y un NavBar para navegar en las distintas categorias y filtrar los productos.
 
-Luego al hacer click en cada producto, tomando el id del mismo se renderiza un detalle un poco mas amplio junto al componente "ItemCount" que permite elegir la cantidad del producto y agregarlo al carrito (funcionalidad que aun no ha sido desarrollada).
+Al clickear en cada producto vamos a un ItemDetail que nos muestra una descripcion mas amplia del producto y la posibilidad de agregarlo al carrito. Una vez agregado un producto al carrito, mostramos el icono en el navBar para que el usuario pueda ingresar al mismo y ver el detalle de su orden hasta el momento.
+
+Cuando el usuario decide finalizar su compra desde el carrito, lo vamos a derivar a un formulario donde brindara datos de contacto, esto generara una orden que sera enviada a la base de datos y dara un feedback del ID de la misma para que el usuario pueda guardarla.
