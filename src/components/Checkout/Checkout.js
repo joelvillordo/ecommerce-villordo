@@ -6,6 +6,7 @@ import { db } from "../../firebase";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+
 const Checkout = ({ sendOrder }) => {
   //Me traigo el cartContext y los datos del pedido
   const cartContent = useContext(CartContext).cart;

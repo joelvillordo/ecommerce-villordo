@@ -12,6 +12,7 @@ const CheckoutContainer = () => {
     const orderId = dbOrders.doc(order.id).id;
     setOrderId(orderId);
   };
+
   return (
     <>
       {!orderId ? (

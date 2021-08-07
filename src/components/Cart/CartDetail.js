@@ -22,7 +22,6 @@ export default function CartDetail({ product }) {
   const classes = useStyles();
   //Me traigo el cartContext
   const cartContent = useContext(CartContext).cart;
-  console.log(cartContent);
   //Handle para eliminar item del carrito
   const { deleteItem } = useContext(CartContext);
 

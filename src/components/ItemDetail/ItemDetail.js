@@ -37,37 +37,38 @@ export default function ItemDetail({ product }) {
   //Stock actualizado
   const stock = onlineStock(product);
 
-  const cartContent = useContext(CartContext).cart;
-  console.log(cartContent);
-
-  return (
-    <>
-      <Card className={classes.root}>
-        <CardHeader title={product.title} />
-        <CardMedia
-          className={classes.media}
-          image={product.pictureUrl}
-          title={product.title}
-        />
-      </Card>
-      <Card className={classes.root}>
-        <CardContent>
-          <Typography variant="body2">
-            <h3>Descripción</h3>
-            {product.description}
-          </Typography>
-          <h3>${product.price.toLocaleString("es")}</h3>
-        </CardContent>
-        {toCart ? (
-          <Link to="/cart">
-            <Button to="/cart" color="primary" variant="contained">
-              Terminá tu compra
-            </Button>
-          </Link>
-        ) : (
-          <ItemCount onAdd={onAdd} stock={stock} />
-        )}
-      </Card>
-    </>
-  );
+  if (product.price === undefined) {
+    return <h2>Error 404 not found</h2>;
+  } else {
+    return (
+      <>
+        <Card className={classes.root}>
+          <CardHeader title={product.title} />
+          <CardMedia
+            className={classes.media}
+            image={product.pictureUrl}
+            title={product.title}
+          />
+        </Card>
+        <Card className={classes.root}>
+          <CardContent>
+            <Typography variant="body2">
+              <h3>Descripción</h3>
+              {product.description}
+            </Typography>
+            <h3>${product.price.toLocaleString("es")}</h3>
+          </CardContent>
+          {toCart ? (
+            <Link to="/cart">
+              <Button to="/cart" color="primary" variant="contained">
+                Terminá tu compra
+              </Button>
+            </Link>
+          ) : (
+            <ItemCount onAdd={onAdd} stock={stock} />
+          )}
+        </Card>
+      </>
+    );
+  }
 }

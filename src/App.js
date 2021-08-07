@@ -28,6 +28,9 @@ function App() {
               <Route path="/cart" component={Cart} />
               <Route path="/checkout" component={CheckoutContainer} />
               <Route path="/success" component={Success} />
+              <Route>
+                <h2>Error 404 not found</h2>
+              </Route>
             </Switch>
           </div>
         </Router>
